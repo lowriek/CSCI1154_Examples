@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>second javascript example</title>
+	<script type="text/javascript">
+	function calculateBMI(){
+		var weight = Number(document.getElementById("weight").value);
+		var feet   = Number(document.getElementById("feet").value);
+		var inches = Number(document.getElementById("inches").value);
+		var height = feet * 12 + inches;
+
+		bmi = weight / (height * height) * 703;
+		
+		if (bmi < 18.5) {
+			alert("Your BMI is " + bmi + " You are underweight");
+		} else if (bmi < 25) {
+			alert("Your BMI is " + bmi + " You are normal weight");
+		} else if (bmi < 30) {
+			alert("Your BMI is " + bmi + " You are over weight");
+		} else if (bmi < 40) {
+			alert("Your BMI is " + bmi + " You are obese");
+		} else {
+			alert("Your BMI is " + bmi + " You are morbidly obese");
+		}
+		return false;
+	}
+</script>
+</head>
+<body>
+<form method="get" name="bmicalculator" onsubmit="return calculateBMI();">
+
+	<label>Enter your weight:
+	<input size="4" name="weight" id="weight"/>pounds</label>
+	<label>Enter your height:
+	<input size="4" name="feet" id="feet"/>feet </label>
+	<input size="3" name="inches" id="inches" /> inches 
+      
+  <br>
+  <input value="Get BMI" type="submit" /><br>
+</form>
+
+</body>
+</html>
