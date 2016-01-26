@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title>third javascript example</title>
+</head>
+<body>
+	<fieldset>
+		<legend>Calculate your BMI</legend>
+		<form method="get" name="bmicalculator" onsubmit="return calculateBMI();">
+
+			<label>Enter your weight:
+			<input size="4" name="weight" id="weight"/>pounds</label>
+			<label>Enter your height:
+			<input size="4" name="feet" id="feet"/>feet </label>
+			<input size="3" name="inches" id="inches" /> inches 
+	  
+		  <br>
+		  <input value="Get BMI" type="submit" /><br>
+		</form>
+	</fieldset>
+	<fieldset>
+		<legend>Your bmi...</legend>
+		<div id="result"></div>
+	</fieldset>
+</body>
+</html>
+<script type="text/javascript" src="js/thirdbmi.js"></script>
