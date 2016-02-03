@@ -31,27 +31,11 @@
 			var outputstr;
 			
 			// create a list
-/****
 			outputstr = "<ul>";
 			for (var i=0; i<mynum;i++){
-				outputstr += "<li>" + i + ' ' + i*i + "</li>";
+				outputstr += "<li>" + i + ' ' + i*i + "</li>"
 			}
 			outputstr += "</ul>";
-****/
-			outputstr = "<ul>";
-			var color = "gold";
-			var i = 0;
-			while (i < mynum){
-				if (color == "gold")
-				   color = "maroon";
-				else
-				   color = "gold";
-
-				outputstr += "<li>" + color + "</li>";
-				i++;
-			}
-			outputstr += "</ul>";
-			
 			
 			// output the list
 			document.getElementById('myoutput').innerHTML = outputstr;
