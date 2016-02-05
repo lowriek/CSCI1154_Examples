@@ -1,62 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="utf-8" />
-	<title>Loops</title>
-	<link rel="stylesheet" type="text/css" href="../css/base.css">
-</head>
-<body>
-	<fieldset>
-		<legend>My Input</legend>
-		<label for="mynumber">My Number</label>
-		<input type="text" name="mynumber" id="mynumber" size="5"/>
-		<br>
-		<button id="myBtn">Try it</button>
-	</fieldset>
-	
-	<fieldset>
-		<legend>My Results</legend>
-		<div id="myoutput" class="result">
-		</div>
+  <head>
+    <meta charset="utf-8" />
+    <title>Loops</title>
+    <link rel="stylesheet" type="text/css" href="../css/base.css">
+  </head>
+  <body>
+    <fieldset>
+      <legend>My Input</legend>
+      <label for="mynumber">My Number</label>
+      <input type="text" name="mynumber" id="mynumber" size="5"/>
+      <br>
+      <button id="myBtn">Try it</button>
+    </fieldset>
+    
+    <fieldset>
+      <legend>My Results</legend>
+      <div id="myoutput" class="result">
+      </div>
 
-	</fieldset>
-	
-	<script type="text/javascript">
-		document.getElementById("myBtn").addEventListener("click", myHandler);
-		function myHandler(){
-		
-			// get the count
-			
-			var mynum = Number(document.getElementById('mynumber').value);
-			var outputstr;
-			
-			// create a list
-/****
-			outputstr = "<ul>";
-			for (var i=0; i<mynum;i++){
-				outputstr += "<li>" + i + ' ' + i*i + "</li>";
-			}
-			outputstr += "</ul>";
-****/
-			outputstr = "<ul>";
-			var color = "gold";
-			var i = 0;
-			while (i < mynum){
-				if (color == "gold")
-				   color = "maroon";
-				else
-				   color = "gold";
-
-				outputstr += "<li>" + color + "</li>";
-				i++;
-			}
-			outputstr += "</ul>";
-			
-			
-			// output the list
-			document.getElementById('myoutput').innerHTML = outputstr;
-
-		}
-	</script>
-</body>
+    </fieldset>
+    
+    <script src="js/loop.js"></script>
+  </body>
 </html>

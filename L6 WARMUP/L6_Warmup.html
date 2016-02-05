@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8" />
-	<title>Loops</title>
+	<title>Warmup</title>
 	<link rel="stylesheet" type="text/css" href="../css/base.css">
 </head>
 <body>
@@ -26,18 +26,27 @@
 		function myHandler(){
 		
 			// get the count
-			
 			var mynum = Number(document.getElementById('mynumber').value);
 			var outputstr;
 			
-			// create a list
-/****
-			outputstr = "<ul>";
-			for (var i=0; i<mynum;i++){
-				outputstr += "<li>" + i + ' ' + i*i + "</li>";
-			}
-			outputstr += "</ul>";
-****/
+			outputstr = alternatelist();
+			
+			// output the list
+			document.getElementById('myoutput').innerHTML = outputstr;
+		}
+		function sumnums(num){
+		
+		}
+		function shoes(){
+		
+		}
+		function factorial(){
+		
+		}
+		function reverststr(str){
+		
+		}
+		function alternatelist(){
 			outputstr = "<ul>";
 			var color = "gold";
 			var i = 0;
@@ -51,11 +60,7 @@
 				i++;
 			}
 			outputstr += "</ul>";
-			
-			
-			// output the list
-			document.getElementById('myoutput').innerHTML = outputstr;
-
+			return outputstr;
 		}
 	</script>
 </body>
