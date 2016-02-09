@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Week 7 Arguments</title>
+</head>
+<body>
+<h1>Function Examples</h1>
+
+<script type="text/javascript"> 
+	function sumtwo(x, y) {
+	  return x+y;
+	}
+
+	function sumall() {
+	  var sum = 0;
+  
+	  for (i = 0; i < arguments.length; i++) {
+		sum += arguments[i];
+	  }
+	  return sum;
+	}
+	
+	var first = sum(3,5);
+	var second = supersum(3, 5, 7 , 9);
+	  document.writeln('<p>first is ' + first + "</p>");
+	  document.writeln("<p>second is " + second + "</p>");
+</script>
+
+</body>
+
+</html>

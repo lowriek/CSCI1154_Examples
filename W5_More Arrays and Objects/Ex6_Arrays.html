@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>JavaScript Arrays</title>
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+</head>
+<body>
+
+<script type="text/javascript">
+
+// create arrays
+var band = new Array("Johnny", "Joey","Dee Dee", "Tommy");
+document.write(band.toString() + '<br>');
+var heart = new Array();
+heart[0] = "Ann";
+heart[heart.length] = "Nancy";
+
+// toString
+document.write(heart.toString() + '<br>');
+heart[10] = "Mike"
+document.write(heart.toString() + '<br>');
+
+var fruits = new Array("orange", "apple", "banana");
+var vegetables = new Array("carrot", "celery", "tomato");
+var starch = new Array("bread", "rice", "potato");
+
+// concat
+var food = starch.concat(fruits, vegetables);
+document.write(food.toString() + "<br>");
+
+// join
+var allfood = food.join(";");
+document.write("allfood  <em>" + allfood + "</em> is a " + typeof(allfood) + "  <br>");
+
+// pop
+document.write("food before pop :<em>" + food.toString() + "</em><br>");
+var popped = food.pop();
+document.write("food after pop :<em>" + food.toString() + "</em><br>");
+document.write("popped after pop :<em>" + popped + "</em><br>");
+
+// push
+var pushed = food.push("eggplant");
+document.write("food after push :<em>" + food.toString() + "</em><br>");
+document.write("pushed after push :<em>" + pushed + "</em><br>");
+
+// reverse
+food.reverse();
+document.write("food after reverse :<em>" + food.toString() + "</em><br>");
+
+// shift
+food.shift();
+document.write("food after shift :<em>" + food.toString() + "</em><br>");
+
+// slice
+var clone = myArray.slice(0);
+
+// splice
+
+// sort
+
+// step through an array
+for (var i = 0; i < food.length;  i++){
+}
+
+// indexOf
+
+</script>
+</body>
+</html>

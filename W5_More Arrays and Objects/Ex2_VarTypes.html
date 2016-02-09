@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Week 7 Example 2</title>
+</head>
+<body>
+<div id="myoutput"></div>
+<script type="text/javascript"> 
+  var bmi = 22.2;
+  var place = "Buckingham Palace";
+  var someVariable = 11;
+  var other;
+  outstr = "<ul><li>bmi: " + bmi + " type: " + typeof(bmi) + "</li>";
+  outstr += "<li>12: " + 12 + " type: " + typeof(12) + "</li>";
+  //outstr += "<li> no var: " + no + " type: " + typeof(no) + "</li>";
+  outstr +="<li>place:" + place + " type: " + typeof(place) + "</li>";
+  outstr +="<li>someVariable: " + someVariable + " type: " + typeof(someVariable) + "</li>";
+  someVariable = "something else";
+  outstr +="<li>someVariable : " + someVariable + " type: " + typeof(someVariable) + "</li>";
+  outstr +="<li>other : " + other + " and its type is " + typeof(other) + "</li></ul>";
+  document.getElementById("myoutput").innerHTML = outstr;
+</script>
+</body>
+</html>

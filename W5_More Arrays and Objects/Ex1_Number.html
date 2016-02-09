@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Week 7 Example 1 The Number Object</title>
+</head>
+<body>
+<div id="myoutput"></div>
+<script type="text/javascript"> 
+  var outstr;
+  outstr = "<h1>I'm the largest number: " + Number.MAX_VALUE + "</h1>";
+  outstr +="<h1>I'm the smallest number: " + Number.MIN_VALUE + "</h1>";
+  var result1 = Number.MAX_VALUE + Number.MAX_VALUE;
+  outstr +="<h1>I'm positive overflow: " + result1 + "</h1>";
+  var result2 = Number.MIN_VALUE - Number.MAX_VALUE - Number.MAX_VALUE;
+  outstr +="<h1>I'm negative overflow: " + result2 + "</h1>";
+  var result3 = 10 / 0;
+  outstr +="<h1>I'm division of a positive number by 0: " + result3 + "</h1>";
+  var result4 = -10 / 0;
+  outstr +="<h1>I'm division of a negative number by 0: " + result4 + "</h1>"; 
+  var result5 = 0 / 0;
+  outstr +="<h1>I'm division of 0 by 0: " + result5 + "</h1>"; 
+  document.getElementById("myoutput").innerHTML = outstr;
+</script>
+</body>
+</html>

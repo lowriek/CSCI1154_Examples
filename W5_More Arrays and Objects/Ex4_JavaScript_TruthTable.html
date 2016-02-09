@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Week 7 - JavaScript Truth Table</title>
+</head>
+<body>
+<div id="myoutput"></div>
+<script type="text/javascript"> 
+
+  outstr  = '<p>"5" == 5 is ' + ("5" == 5) + "</p>";
+  outstr += "<p>null == undefined is " + (null == undefined) + "</p>";
+  outstr += '<p>"NaN" == NaN is ' + ("NaN" == NaN) + "</p>";
+  outstr += '<p>NaN == NaN is ' + (NaN == NaN) + "</p>";
+  outstr += '<p>NaN != NaN is ' + (NaN != NaN) + "</p>";
+  outstr += '<p>false == 0 is ' + (false == 0) + "</p>";
+  outstr += '<p>true == 1 is ' + (true == 1) + "</p>";
+  outstr += '<p>true == 2 is ' + (true == 2) + "</p>";
+  outstr += '<p>undefined == 0 is ' + (undefined == 0) + "</p>";
+  outstr += '<p>null == 0 is ' + (null == 0) + "</p>";
+  document.getElementById("myoutput").innerHTML = outstr;
+  
+</script>
+</body>
+</html>
