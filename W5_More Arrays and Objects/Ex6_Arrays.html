@@ -15,6 +15,7 @@ document.write(band.toString() + '<br>');
 var heart = new Array();
 heart[0] = "Ann";
 heart[heart.length] = "Nancy";
+heart[heart.length] = "Dave";
 
 // toString
 document.write(heart.toString() + '<br>');
@@ -32,6 +33,7 @@ document.write(food.toString() + "<br>");
 // join
 var allfood = food.join(";");
 document.write("allfood  <em>" + allfood + "</em> is a " + typeof(allfood) + "  <br>");
+
 
 // pop
 document.write("food before pop :<em>" + food.toString() + "</em><br>");
@@ -52,19 +54,24 @@ document.write("food after reverse :<em>" + food.toString() + "</em><br>");
 food.shift();
 document.write("food after shift :<em>" + food.toString() + "</em><br>");
 
+
 // slice
-var clone = myArray.slice(0);
+var clone = food.slice(0);
+document.write("clone after slice :<em>" + clone.toString() + "</em><br>");
 
 // splice
 
 // sort
+food.sort();
+document.write("food after sort :<em>" + food.toString() + "</em><br>");
 
+/**
 // step through an array
 for (var i = 0; i < food.length;  i++){
 }
 
 // indexOf
-
+***/
 </script>
 </body>
 </html>
