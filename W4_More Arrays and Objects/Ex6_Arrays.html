@@ -10,13 +10,14 @@
 <script type="text/javascript">
 
 // create arrays
+document.write("// create arrays<br>");
 var band = new Array("Johnny", "Joey","Dee Dee", "Tommy");
 document.write(band.toString() + '<br>');
 var heart = new Array();
 heart[0] = "Ann";
 heart[heart.length] = "Nancy";
 
-// toString
+document.write("<br><br>// toString, then add at location 10<br>");
 document.write(heart.toString() + '<br>');
 heart[10] = "Mike"
 document.write(heart.toString() + '<br>');
@@ -25,45 +26,101 @@ var fruits = new Array("orange", "apple", "banana");
 var vegetables = new Array("carrot", "celery", "tomato");
 var starch = new Array("bread", "rice", "potato");
 
-// concat
+document.write("<br><br>// concat<br>");
 var food = starch.concat(fruits, vegetables);
 document.write(food.toString() + "<br>");
 
-// join
+document.write("<br><br>// join, creates a string <br>");
 var allfood = food.join(";");
 document.write("allfood  <em>" + allfood + "</em> is a " + typeof(allfood) + "  <br>");
 
-// pop
+document.write("<br><br>// pop <br>");
 document.write("food before pop :<em>" + food.toString() + "</em><br>");
 var popped = food.pop();
 document.write("food after pop :<em>" + food.toString() + "</em><br>");
 document.write("popped after pop :<em>" + popped + "</em><br>");
 
-// push
+document.write("<br><br>// push<br>");
 var pushed = food.push("eggplant");
 document.write("food after push :<em>" + food.toString() + "</em><br>");
 document.write("pushed after push :<em>" + pushed + "</em><br>");
 
-// reverse
+document.write("<br><br>// reverse<br>");
 food.reverse();
 document.write("food after reverse :<em>" + food.toString() + "</em><br>");
 
-// shift
+document.write("<br><br>// shift<br>");
 food.shift();
 document.write("food after shift :<em>" + food.toString() + "</em><br>");
 
-// slice
-var clone = myArray.slice(0);
+document.write("<br><br>// slice<br>");
+var food = starch.concat(fruits, vegetables);
+document.write("Reconstitutued  " + food.toString() + "<br>");
 
-// splice
+var sliceoffood = food.slice(4,7);
+document.write("sliceoffood  4,7:<em>" + sliceoffood.toString() + "</em><br>");
+var biggersliceoffood = food.slice(4);
+document.write("sliceoffood  4:<em>" + biggersliceoffood.toString() + "</em><br>");
 
-// sort
+var clone = food.slice(0);
+document.write("sliceoffood 0:<em>" + clone.toString() + "</em><br>");
+
+document.write("<br><br>// sort<br>");
+clone.sort();
+document.write("sort the clone:<em>" + clone + "</em><br>");
+
+document.write("<br><br>// splice<br>");
+var myFish = ['angel', 'clown', 'mandarin', 'surgeon'];
+document.write("<br><br>Fish:<em>" + myFish.toString() + "</em><br>");
+
+document.write("<br><br>// removes 0 elements from index 2, and inserts 'drum'<br>");
+var removed = myFish.splice(2, 0, 'drum');
+document.write("<br><br>Fish:<em>" + myFish.toString() + "</em><br>");
+
+// myFish is ['angel', 'clown', 'drum', 'mandarin', 'surgeon']
+// removed is [], no elements removed
+
+// myFish is ['angel', 'clown', 'drum', 'mandarin', 'surgeon'] 
+document.write("<br><br>// removes 1 element from index 3<br>");
+removed = myFish.splice(3, 1);
+document.write("<br><br>Fish:<em>" + myFish.toString() + "</em><br>");
+
+// myFish is ['angel', 'clown', 'drum', 'surgeon']
+// removed is ['mandarin']
+
+// myFish is ['angel', 'clown', 'drum', 'surgeon'] 
+document.write("<br><br>// removes 1 element from index 2, and inserts 'trumpet'<br>");
+removed = myFish.splice(2, 1, 'trumpet');
+document.write("<br><br>Fish:<em>" + myFish.toString() + "</em><br>");
+
+// myFish is ['angel', 'clown', 'trumpet', 'surgeon']
+// removed is ['drum']
+
+// myFish is ['angel', 'clown', 'trumpet', 'surgeon'] 
+document.write("<br><br>// removes 2 elements from index 0, and inserts 'parrot', 'anemone' and 'blue'<br>");
+removed = myFish.splice(0, 2, 'parrot', 'anemone', 'blue');
+document.write("<br><br>Fish:<em>" + myFish.toString() + "</em><br>");
+
+// myFish is ['parrot', 'anemone', 'blue', 'trumpet', 'surgeon']
+// removed is ['angel', 'clown']
+
+// myFish is ['parrot', 'anemone', 'blue', 'trumpet', 'surgeon'] 
+document.write("<br><br>// removes 2 elements from index 3<br>");
+removed = myFish.splice(myFish.length -3, 2);
+document.write("<br><br>Fish:<em>" + myFish.toString() + "</em><br>");
+
+// myFish is ['parrot', 'anemone', 'surgeon']
+// removed is ['blue', 'trumpet']
+
 
 // step through an array
 for (var i = 0; i < food.length;  i++){
 }
 
-// indexOf
+document.write("<br><br>// indexOf <br>");
+var whereisthecelery = clone.indexOf('celery');
+document.write("The celery is here:<em>" + whereisthecelery + "</em><br>");
+
 
 </script>
 </body>
