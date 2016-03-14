@@ -37,5 +37,3 @@ function handle_form(){
                 The sum is $sum.
             </fieldset>";
 }
-
-
