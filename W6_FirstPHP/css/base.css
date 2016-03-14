@@ -1,0 +1,16 @@
+@charset "UTF-8";
+body 
+	{ 
+	    font-family: "Lucida Sans Unicode", "Lucida Grande";
+	}
+.right 
+	{
+		float:right;
+	}
+label 
+	{ 	
+		float: left;
+		margin-right: 10px;
+		margin-left: 10px;
+		width: 80px;
+	}
