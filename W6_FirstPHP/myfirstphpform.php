@@ -17,11 +17,16 @@
 </html>
 <?php
 function display_form(){
+	if ( isset( $_GET['count1'] ) )
+		$count1 = $_GET['count1'];
+	else 
+		$count1 = '';
 ?>
 <fieldset>
 	<legend>The First Form</legend>
 	<form method="get">
-		<label for="count1">First: </label><input type="text" name="count1"/><br>
+		<label for="count1">First: </label><input type="text" name="count1"
+			value="<?php echo $count1; ?>"/><br>
 		<label for="count2">Second: </label><input type="text" name="count2"/>
 		<input type="submit"  name="mysubmit" value="Go"/>
 	</form>

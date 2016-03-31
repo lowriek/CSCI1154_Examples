@@ -1,5 +1,5 @@
 <?php
-include("dbconnect.php");
+include("dbconn.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -15,8 +15,8 @@ include("dbconnect.php");
 <?php 
 
 if (isset($_GET['formsubmitted']))
-	handleform($_GET['studentmenu']);
-displayform($_GET['studentmenu']);
+	handleform("studentmenu");
+displayform("studentmenu");
 
 ?>	
 </body>
@@ -24,11 +24,11 @@ displayform($_GET['studentmenu']);
 <?php
 function handleform($id){
 
-	$dbc = connectToDB();
+	$dbc = connect_to_db( "jed" );
 	$query = "select lastname, firstname, major from student where ID='$id'";
-	$result = performQuery($dbc, $query);
+	$result = perform_query($dbc, $query);
 	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-	
+	print_r($row);
 	$firstname = $row['firstname'];
 	$lastname = $row['lastname'];
 	$major = $row['major'];
@@ -37,9 +37,9 @@ function handleform($id){
 	
 }
 function displayform($currentstudent = "") {
-	$dbc = connectToDB();
+	$dbc = connect_to_db( "jed" );
 	$query = "select ID, lastname, firstname from student";
-	$result = performQuery($dbc, $query);
+	$result = perform_query($dbc, $query);
 	
 	echo "<form method=\"get\">
 		  <select name=\"studentmenu\">";
@@ -57,6 +57,6 @@ function displayform($currentstudent = "") {
 	echo "</select>
 		<input type=\"submit\" name=\"formsubmitted\" value=\"go\" />
 		</form>";
-	disconnectFromDB($dbc, $result);
+	disconnect_from_db($dbc, $result);
 }
 ?>

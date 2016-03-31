@@ -12,7 +12,7 @@
 	test_variable( $some_number);
 	
 	$some_text = "Hi";
-	echo "testing a number: <br>";
+	echo "testing text: <br>";
 	test_variable( $some_text);	
 	
 	$some_variable = null;
