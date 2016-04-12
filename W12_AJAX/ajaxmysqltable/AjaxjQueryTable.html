@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Ajax JSON Demo</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css" />
+
+  </head>
+  <body>
+  	<button id="maketable">Make Table</button>
+  
+  	<table id="results"><tr><th>Country Name</th><th>Continent</th></tr>
+  	
+  	</table>
+  	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script type="text/javascript">
+		$(document).ready(function(){
+		
+            		$("#maketable").click(function() {
+						$.getJSON( "mysqljsonMR.php" , function(data) {
+					
+							$.each(data, function(i, country){
+								$("#results").append("<tr><td>" + country.CountryName + "</td><td>" + country.Continent + "</td></tr>");
+							});
+						
+						})
+						.fail(function() {
+								console.log( "getJSON error" );
+						});
+					});
+			});
+    </script>
+
+  </body>
+</html>
