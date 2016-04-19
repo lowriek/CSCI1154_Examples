@@ -1,0 +1,50 @@
+List of Use Cases
+
+1. Insert a Student
+Actor - Registrar
+
+insert into STUDENT(Lastname, Firstname, Major, GradYear) 
+values ("Abama",	"Al", "COMP SCI B.S.", 2014);
+
+2. Delete a Student
+Actor - Registrar
+delete from STUDENT where Lastname="Abama"
+or 
+delete from STUDENT where ID=7
+
+3. Enroll a Student in a class
+Actor - Registrar
+
+select * from Student
+select * from Course
+insert into ENROLL(StudentID, CourseID, Grade) values (17, 1, "A");
+
+4. Enter a grade for a student
+Actor - Instructor
+
+SELECT COURSE.CourseID, COURSE.DeptCode, COURSE.Title
+FROM ENROLL
+JOIN COURSE ON ENROLL.CourseID = COURSE.CourseID
+WHERE Prof =  "Lowrie"
+
+SELECT Lastname, Firstname, Grade
+FROM STUDENT
+JOIN ENROLL ON STUDENT.ID = ENROLL.StudentID
+JOIN COURSE ON ENROLL.CourseID = COURSE.CourseID
+WHERE Prof =  "Lowrie" and isNull(Grade)
+
+update ENROLL set Grade="A" where StudentID = 3 and CourseID = 7
+
+5. Compute a student's GPA
+Actor - Registrar, Student
+
+select STUDENT.ID,  avg(Points) from
+STUDENT join ENROLL on STUDENT.ID = ENROLL.StudentID 
+join GRADEPOINTS on GRADEPOINTS.Grade = ENROLL.Grade
+group by STUDENT.ID
+
+select STUDENT.ID,  avg(Points) from
+STUDENT join ENROLL on STUDENT.ID = ENROLL.StudentID 
+join GRADEPOINTS on GRADEPOINTS.Grade = ENROLL.Grade
+where STUDENT.ID = 2
+
